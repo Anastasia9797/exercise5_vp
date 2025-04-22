@@ -8,13 +8,32 @@
         Title="MainWindow" Height="450" Width="450">
     <Grid>
         <TabControl>
-            <TabItem Header="Загальне">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\User\3 курс\Візуальне програмування\Image\PurplePoint.png" Width="10"/>
+                        <TextBlock Text="Purple" Foreground="Purple"/>
+                    </StackPanel>
+                </TabItem.Header>
                 <Image Source="C:\Users\User\Pictures\Screenshots\Знімок екрана 2025-04-22 180304.png"/>
             </TabItem>
-            <TabItem Header="Безпека">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\User\3 курс\Візуальне програмування\Image\BluePoint.png" Width="10"/>
+                        <TextBlock Text="Blue" Foreground="Blue"/>
+                    </StackPanel>
+                </TabItem.Header>
                 <Label Content="Тут міститься якийсь контент"/>
             </TabItem>
-            <TabItem Header="Деталі"/>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\User\3 курс\Візуальне програмування\Image\GreenPoint.png" Width="10"/>
+                        <TextBlock Text="Green" Foreground="Green"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
