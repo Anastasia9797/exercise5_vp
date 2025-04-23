@@ -5,14 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:exercise5_vp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="475" Width="450">
-    <DockPanel>
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" Margin="2,5">
-            <Button Name="btnPreviousTab" Click="btnPreviousTab_Click" Margin="4" Padding="4">Previous</Button>
-            <Button Name="btnNextTab" Click="btnNextTab_Click" Margin="4" Padding="4">Next</Button>
-            <Button Name="btnSelectedTab" Click="btnSelectedTab_Click" Margin="4" Padding="4">Selected</Button>
-        </StackPanel>
-        <TabControl Name="tcSample">
+        Title="MainWindow" Height="425" Width="450">
+    <Grid>
+        <TabControl TabStripPlacement="Right">
             <TabItem Header="Загальне">
                 <Image Source="C:\Users\User\Pictures\Screenshots\Знімок екрана 2025-04-22 180304.png"/>
             </TabItem>
@@ -21,5 +16,5 @@
             </TabItem>
             <TabItem Header="Деталі"/>
         </TabControl>
-    </DockPanel>
+    </Grid>
 </Window>
