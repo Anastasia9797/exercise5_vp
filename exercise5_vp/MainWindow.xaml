@@ -7,25 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="425" Width="450" UseLayoutRounding="True">
     <Grid>
-        <TabControl TabStripPlacement="Right">
+        <TabControl Margin="10" BorderThickness="0" Background="LightPink">
             <TabControl.Resources>
-                <Style TargetType="{x:Type TabItem}">
-                    <Setter Property="HeaderTemplate">
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
                         <Setter.Value>
-                            <DataTemplate>
-                                <ContentPresenter Content="{TemplateBinding Content}">
-                                    <ContentPresenter.LayoutTransform>
-                                        <RotateTransform Angle="90"/>
-                                    </ContentPresenter.LayoutTransform>
-                                </ContentPresenter>
-                            </DataTemplate>
+                            <ControlTemplate TargetType="TabItem">
+                                <Grid Name="Panel">
+                                    <ContentPresenter x:Name="ContentSide" VerticalAlignment="Center" 
+                                                      HorizontalAlignment="Center" ContentSource="Header"
+                                                      Margin="10,2"/>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Panel" Property="Background" Value="LightSalmon"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Panel" Property="Background" Value="Bisque"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
                         </Setter.Value>
                     </Setter>
-                    <Setter Property="Padding" Value="3"/>
                 </Style>
             </TabControl.Resources>
             <TabItem Header="Загальне">
-                <Image Source="C:\Users\User\Pictures\Screenshots\Знімок екрана 2025-04-22 180304.png"/>
+                <Image Source="C:\Users\User\Pictures\Screenshots\Знімок екрана 2025-04-22 180304.png" Margin="10"/>
             </TabItem>
             <TabItem Header="Безпека">
                 <Label Content="Тут міститься якийсь контент"/>
