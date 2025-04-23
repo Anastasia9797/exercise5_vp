@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="450">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <TextBlock FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Ліва сторона</TextBlock>
-        <GridSplitter Grid.Column="1" Width="3" HorizontalAlignment="Stretch"  Background="Maroon"/>
-        <TextBlock Grid.Column="2" FontSize="55" HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" TextWrapping="Wrap">Права сторона</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Верх</TextBlock>
+        <GridSplitter Grid.Row="1" Height="3" HorizontalAlignment="Stretch" Background="Maroon"/>
+        <TextBlock Grid.Row="2" FontSize="55" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" TextWrapping="Wrap">Низ</TextBlock>
     </Grid>
 </Window>
