@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:exercise5_vp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="425" Width="450">
+        Title="MainWindow" Height="425" Width="450" UseLayoutRounding="True">
     <Grid>
         <TabControl TabStripPlacement="Right">
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="HeaderTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <ContentPresenter Content="{TemplateBinding Content}">
+                                    <ContentPresenter.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </ContentPresenter.LayoutTransform>
+                                </ContentPresenter>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Padding" Value="3"/>
+                </Style>
+            </TabControl.Resources>
             <TabItem Header="Загальне">
                 <Image Source="C:\Users\User\Pictures\Screenshots\Знімок екрана 2025-04-22 180304.png"/>
             </TabItem>
