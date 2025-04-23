@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:exercise5_vp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="425" Width="450" UseLayoutRounding="True">
+        Title="MainWindow" Height="425" Width="450">
     <Grid>
-        <TabControl Margin="10" BorderThickness="0" Background="LightPink">
+        <TabControl Margin="10" BorderThickness="1" Background="LightPink" BorderBrush="DeepPink">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="TabItem">
-                                <Grid Name="Panel">
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="IndianRed" CornerRadius="4,4,0,0" Margin="2,0">
                                     <ContentPresenter x:Name="ContentSide" VerticalAlignment="Center" 
                                                       HorizontalAlignment="Center" ContentSource="Header"
                                                       Margin="10,2"/>
-                                </Grid>
+                                </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter TargetName="Panel" Property="Background" Value="LightSalmon"/>
+                                        <Setter TargetName="Border" Property="Background" Value="LightSalmon"/>
                                     </Trigger>
                                     <Trigger Property="IsSelected" Value="False">
-                                        <Setter TargetName="Panel" Property="Background" Value="Bisque"/>
+                                        <Setter TargetName="Border" Property="Background" Value="Bisque"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
